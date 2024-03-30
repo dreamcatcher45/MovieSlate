@@ -1,20 +1,20 @@
 import React from "react";
 
-const Titlebox = () => {
-  return (
+const Titlebox = ({ onExploreClick }) => {
+ return (
     <div className="titlebox">
       <h1 className="title">RAYA AND THE</h1>
       <h1 className="title">LAST DRAGON</h1>
-<div className="spacer"/>
+      <div className="spacer"/>
       <h2 className="subtitle">
         A Disney Original Film&ensp;{" "}
         <span className="green"> 98% Match &ensp; </span>
         <span className="white">2021</span>
       </h2>
       <div className="spacer"/>
-      <button className="reload-button">Explore</button>
+      <button className="reload-button" onClick={onExploreClick}>Explore</button>
     </div>
-  );
+ );
 };
 
 export default Titlebox;

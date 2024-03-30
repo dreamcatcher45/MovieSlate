@@ -48,6 +48,15 @@
   font-family: "Alexandria", sans-serif;
 }
 
+.category-name {
+  color: white;
+  text-align: left; 
+  margin: 20px 0; /* Add space above and below the element */
+  font-size: 2em; /* Make title larger */
+  font-family: "Alexandria", sans-serif;
+ }
+ 
+
 .subtitle {
   margin: 0;
   font-size: 1em;
@@ -98,16 +107,6 @@
  }
  
  
- /* Cardbar.css */
- .cardbar {
-  margin-top: 2em;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  overflow-x: auto; /* Make the cards slidable */
-  white-space: nowrap; /* Prevent wrapping */
- }
- 
 /* TextButton.css */
 .text-button {
   margin-left: 20px;
@@ -131,3 +130,29 @@
   color: #003c80;
  }
  
+ /* Cardbar.css */
+
+ .cardbar {
+  margin-top: 2em;
+  display: flex;
+  flex-wrap: nowrap; /* Ensure cards are in a single row */
+  justify-content: center;
+  overflow-x: auto; /* Make the cards slidable */
+  white-space: nowrap; /* Prevent wrapping */
+  overflow: hidden;
+  position: relative;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(-100%);
+ }
+  100% {
+    transform: translateX(0); /* Swap direction */
+ }
+}
+
+.cardbar > div {
+ display: inline-block;
+ animation: slide 30s linear infinite; /* Increase duration to slow down */
+}
