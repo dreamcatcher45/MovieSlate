@@ -21,22 +21,29 @@ const Details = ({ movieId, goBack }) => {
 
   return (
     <div className="details">
-      <h2>Movie Details</h2>
       <button className="back-text-button" onClick={() => goBack()}>
- <span className="back-arrow">&larr;</span>
- Back to main Dashboard
-</button>
-
-      <p>Title: {movieDetails.Title}</p>
-      <p>Year: {movieDetails.Year}</p>
-      <p>Rated: {movieDetails.Rated}</p>
-      <p>Released: {movieDetails.Released}</p>
-      <p>Runtime: {movieDetails.Runtime}</p>
-      <p>Genre: {movieDetails.Genre}</p>
-      <p>Plot: {movieDetails.Plot}</p>
-      <p>
-        Poster: <img src={movieDetails.Poster} alt="Movie Poster" />
-      </p>
+        <span className="back-arrow">&larr;</span>
+        Back to main Dashboard
+      </button>
+      <div class="movie-details">
+        <div>
+          <img  class="poster" src={movieDetails.Poster} alt="Movie Poster" />
+        </div>
+        <div class="details">
+          <div>
+            <p className="Movie-title">{movieDetails.Title}</p>
+            <p className="Movie-subtitle">
+              {movieDetails.Year}&nbsp;{" •  "}&nbsp;
+              {movieDetails.Genre}
+            </p>
+            <p className="Movie-plot">{movieDetails.Plot}</p>
+          </div>
+          <p className="Movie-subtitle">Cast</p>
+          <p className="Movie-plot">{movieDetails.Actors}</p>
+          <p className="Movie-subtitle">Rating</p>
+          <p>{movieDetails.imdbRating}</p>
+        </div>
+      </div>
     </div>
   );
 };

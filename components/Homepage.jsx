@@ -55,7 +55,8 @@ const Homepage = () => {
      {selectedMovieId ? (
       <>
         <div className="background-dash"></div>
-        <div className="titlebox-container">
+        <div className="d-overlay"></div>
+        <div className="details-container">
        <Details movieId={selectedMovieId} goBack={goBack} />
         </div>
       </>
