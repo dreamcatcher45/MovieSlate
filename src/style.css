@@ -17,6 +17,17 @@
   background-position: center;
 }
 
+.background-dash {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("src/assets/view.webp");
+  background-size: cover;
+  background-position: center;
+}
+
 .overlay {
   position: fixed;
   top: 0;
@@ -155,4 +166,24 @@
 .cardbar > div {
  display: inline-block;
  animation: slide 30s linear infinite; /* Increase duration to slow down */
+}
+
+
+/* backbutton */
+.back-text-button {
+  display: inline-flex;
+  align-items: center;
+  background-color: transparent;
+  color: blue;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+.back-text-button:hover {
+  background-color: #f0f0f0;
+}
+.back-arrow {
+  margin-right: 10px;
 }

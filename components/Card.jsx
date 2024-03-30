@@ -1,8 +1,8 @@
 import React from 'react';
 
-const Card = ({ imageUrl }) => {
+const Card = ({ imageUrl, id, onCardClick }) => {
  return (
-    <div className="card">
+    <div className="card" onClick={() => onCardClick(id)}>
       <img src={imageUrl} alt="Card" />
     </div>
  );
