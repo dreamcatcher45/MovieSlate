@@ -9,7 +9,7 @@ import "../src/style.css";
 const Homepage = () => {
  const [movies, setMovies] = useState([]);
  const [currentPage, setCurrentPage] = useState(1);
- const api_key = process.env.VITE_YOUR_SECRET_KEY; 
+ const api_key = import.meta.env.VITE_YOUR_SECRET_KEY; 
 
  const fetchMovies = async (page) => {
     const response = await axios.get(`https://www.omdbapi.com/?s=Marvel&apikey=${api_key}&page=${page}`);
